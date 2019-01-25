@@ -6,13 +6,11 @@
 body {
   font-family:sans-serif;
   margin: 25px;
-  color: #222;
-  background-color: #f5f5f5;
 }
 
 h1 {
   font-weight: bold;
-  
+  text-align: center;
 }
 
 .bold {
@@ -23,14 +21,27 @@ p {
   max-width: 900px;
 }
 
-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: #87D37C;
-  display: inline-block;
+section {
+  padding: 10px;
+  width: 33%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+#userInputContainer {
   width: 100%;
-  max-width: 340px;
-  border-radius: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#userListContainer, #exerciseContainer {
+  width: 100%;
+}
+
+#userListContainer th, #exerciseContainer th{
+  padding: 5px;
 }
 
 input {
@@ -44,6 +55,8 @@ input {
 }
 
 input[type=submit] {
+  width: 50%;
+  margin: auto;
   font-size: 16px;
   border-radius: 3px;
   background-color: #E4F1FE;
@@ -61,4 +74,64 @@ code {
   font-size: 1.2em;
   background-color: #FFFEC4;
   padding: 2px;
+}
+
+/*W3Schools Modal Example*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  max-width: 80%;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0px; 
+  }
+  
+  section {
+    width: 100% !important;
+    padding: 5px;
+  }
+  
+  table {
+    max-width: 100%; 
+  }
+  
+  th {
+    max-width: 33%; 
+  }
+  
 }
